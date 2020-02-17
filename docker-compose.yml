@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mphone:
+    build: .
+    restart: always
+    environment:
+      - TERM=xterm-256color
+    volumes:
+      - ./service.py:/code/service.py
+    ports:
+      - 3333:3333
+
